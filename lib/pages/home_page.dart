@@ -35,6 +35,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Column(
         children: [
+          //Text Description
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25.0),
             child: Text(
@@ -43,11 +44,34 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           SizedBox(height: 25),
-          TextField(
-            decoration: InputDecoration(
-              focusedBorder: OutlineInputBorder(),
+
+          //SearchBar
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            child: TextField(
+              decoration: InputDecoration(
+                prefixIcon: Icon(Icons.search),
+                hintText: 'Search What kind of Coffee You Love',
+                focusedBorder: OutlineInputBorder(),
+                enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.grey.shade600)),
+              ),
             ),
-          )
+          ),
+
+          SizedBox(
+            height: 25,
+          ),
+          // Horizontal ListView
+
+          Expanded(
+              child: ListView(
+            children: [
+              Container(
+                width: 200,
+              )
+            ],
+          ))
         ],
       ),
     );
