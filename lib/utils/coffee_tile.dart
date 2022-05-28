@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class CoffeeTile extends StatelessWidget {
@@ -28,9 +30,30 @@ class CoffeeTile extends StatelessWidget {
                     "Latte",
                     style: TextStyle(fontSize: 20),
                   ),
+                  SizedBox(
+                    height: 4,
+                  ),
                   Text(
                     "With Almond Coffee",
                     style: TextStyle(color: Colors.grey[700]),
+                  )
+                ],
+              ),
+            ),
+
+            //Price Tags
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('\$4.00'),
+                  Container(
+                    decoration: BoxDecoration(
+                        color: Colors.orange,
+                        borderRadius: BorderRadius.circular(6)),
+                    child: Icon(Icons.add),
                   )
                 ],
               ),
