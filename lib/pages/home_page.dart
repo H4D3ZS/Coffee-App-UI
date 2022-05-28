@@ -119,7 +119,23 @@ class _HomePageState extends State<HomePage> {
           Expanded(
               child: ListView(
             scrollDirection: Axis.horizontal,
-            children: [CoffeeTile()],
+            children: [
+              CoffeeTile(
+                coffeeImagePath: 'assets/latte.jpeg',
+                coffeeName: 'Latte',
+                coffeePrice: '4.20',
+              ),
+              CoffeeTile(
+                coffeeImagePath: 'assets/c1.jpeg',
+                coffeeName: 'Brown Coffee',
+                coffeePrice: '5.65',
+              ),
+              CoffeeTile(
+                coffeeImagePath: 'assets/milk.jpeg',
+                coffeeName: 'Matcha',
+                coffeePrice: '6.75',
+              ),
+            ],
           ))
         ],
       ),
