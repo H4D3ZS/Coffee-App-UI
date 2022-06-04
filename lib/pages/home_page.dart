@@ -72,11 +72,13 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: [
           //Text Description
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25.0),
-            child: Text(
-              "Find The Best Coffee For You",
-              style: GoogleFonts.bebasNeue(fontSize: 60),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Text(
+                "Find The Best Coffee For You",
+                style: GoogleFonts.bebasNeue(fontSize: 60),
+              ),
             ),
           ),
           SizedBox(height: 25),
@@ -116,17 +118,17 @@ class _HomePageState extends State<HomePage> {
 
           // Horizontal ListView of Coffee Tiles
 
-          Expanded(
+          Flexible(
               child: ListView(
             scrollDirection: Axis.horizontal,
             children: [
               CoffeeTile(
-                coffeeImagePath: 'assets/latte.jpeg',
+                coffeeImagePath: 'assets/milk.jpeg',
                 coffeeName: 'Latte',
                 coffeePrice: '4.20',
               ),
               CoffeeTile(
-                coffeeImagePath: 'assets/c1.jpeg',
+                coffeeImagePath: 'assets/milk.jpeg',
                 coffeeName: 'Brown Coffee',
                 coffeePrice: '5.65',
               ),

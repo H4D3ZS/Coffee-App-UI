@@ -29,22 +29,24 @@ class CoffeeTile extends StatelessWidget {
                 //coffee Image
                 borderRadius: BorderRadius.circular(12),
                 child: Image.asset(coffeeImagePath)),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 12.0),
-              child: Column(
-                children: [
-                  Text(
-                    coffeeName,
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  SizedBox(
-                    height: 4,
-                  ),
-                  Text(
-                    "With Almond Coffee",
-                    style: TextStyle(color: Colors.grey[700]),
-                  )
-                ],
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 12.0),
+                child: Column(
+                  children: [
+                    Text(
+                      coffeeName,
+                      style: TextStyle(fontSize: 20),
+                    ),
+                    SizedBox(
+                      height: 4,
+                    ),
+                    Text(
+                      "With Almond Coffee",
+                      style: TextStyle(color: Colors.grey[700]),
+                    )
+                  ],
+                ),
               ),
             ),
 
